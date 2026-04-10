@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <>
-      <Button onClick={handleClick} label={"あいうえお"}></Button>
+      <Button onClick={handleClick}>12345</Button>
     </>
   )
 }
