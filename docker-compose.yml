@@ -1,8 +1,12 @@
 services:
+  # frontendという名前のコンテナを定義  
   frontend:
+    # 現在のフォルダ（docker-compose.yml）にあるDockerfileを使ってビルドする
     build: .
+    # ホストPCの5173番ポートとコンテナの5173番ポートを繋ぐ
     ports:
       - "5173:5173"
+    # フォルダを同期する
     volumes:
       - .:/app
       - /app/node_modules
