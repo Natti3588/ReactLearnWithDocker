@@ -2,7 +2,7 @@ import { useState } from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState("");
+  const [todos, setTodos] = useState([]);
 
   return (
     <ul className="list bg-base-100 rounded-box shadow-md mx-10">
