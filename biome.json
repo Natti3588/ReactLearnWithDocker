@@ -12,12 +12,16 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineEnding": "crlf"
+    "lineEnding": "crlf",
+    "lineWidth": 100
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true
+    },
+    "domains": {
+      "react": "recommended"
     }
   },
   "javascript": {
