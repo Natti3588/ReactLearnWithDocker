@@ -7,9 +7,11 @@ const Header: React.FC = () => {
         <a className="btn btn-ghost text-xl">ToDoアプリ</a>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1"> 
+        <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="https://github.com/Natti3588"><FaGithub className="w-6 h-6" /></a>
+            <a href="https://github.com/Natti3588">
+              <FaGithub className="w-6 h-6" />
+            </a>
           </li>
           <li>
             <details>
