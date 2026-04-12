@@ -9,9 +9,11 @@ type TodoItemProps = {
 const TodoItem: React.FC<TodoItemProps> = ({ todo, toggleTodo, deleteTodo }) => {
   return (
     <li className="list-row">
-      <div className="text-4xl font-thin opacity-30 tabular-nums">01</div>
-      <div className="flex justify-center items-center list-col-grow">
-        <div className="text-xs uppercase font-semibold">Remaining Reason</div>
+      <div className="text-4xl font-thin opacity-30 tabular-nums">{todo.id}</div>
+      <div className="grid grid-cols-3 items-center list-col-grow">
+        <div />
+        <div className="justify-self-center text-lg font-semibold" onClick={() => toggleTodo(todo.id)}>{todo.text}</div>
+        <button className="justify-self-end btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl" onClick={() => deleteTodo(todo.id)}>削除</button>
       </div>
     </li>
   );
