@@ -6,7 +6,7 @@ const TodoList: React.FC = () => {
 
   return (
     <ul className="list bg-base-100 rounded-box shadow-md mx-10">
-      <li className="p-4 pb-2 text-lg opacity-60 tracking-wide text-center uppercase">
+      <li className="p-4 pb-2 text-lg opacity-60 tracking-wide text-left uppercase">
         TodoList一覧
       </li>
       <TodoItem />
