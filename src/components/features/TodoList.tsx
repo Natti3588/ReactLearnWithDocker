@@ -1,8 +1,14 @@
 import { useState } from "react";
 import TodoItem from "./TodoItem";
 
+type Todo = {
+  id: number;
+  text: string;
+  completed: boolean;
+};
+
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   return (
     <ul className="list bg-base-100 rounded-box shadow-md mx-10">
