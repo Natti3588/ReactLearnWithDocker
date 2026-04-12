@@ -1,11 +1,6 @@
 import { useState } from "react";
+import type { Todo } from "../../types/todo"
 import TodoItem from "./TodoItem";
-
-export type Todo = {
-  id: number;
-  text: string;
-  completed: boolean;
-};
 
 const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([{ id: 1, text: "unti", completed: false }]);
