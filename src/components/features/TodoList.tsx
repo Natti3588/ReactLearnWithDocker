@@ -4,19 +4,19 @@ import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState<Todo[]>([{ id: 1, text: "unti", completed: false }]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-  const toggleTodo = (id: number) => {
+  const toggleTodo = (id: string) => {
     setTodos(
       todos.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)),
     );
   };
 
   const addTodo = (text: string) => {
-    setTodos([...todos, { id: 1, text: text, completed: false }]);
+    setTodos([...todos, { id: crypto.randomUUID(), text: text, completed: false }]);
   };
 
-  const deleteTodo = (id: number) => {
+  const deleteTodo = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
