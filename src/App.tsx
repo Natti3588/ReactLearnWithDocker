@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TodoList from "./components/features/TodoList";
 import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 import Button from "./components/ui/Button";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Header />
       <Button onClick={handleClick}>123</Button>
       <TodoList />
+      <Footer />
     </>
   );
 };
