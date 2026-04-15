@@ -26,9 +26,13 @@ const TodoList: React.FC = () => {
         <li className="p-4 pb-2 text-lg opacity-60 tracking-wide text-left items-center border-b border-base-300">
           Todo一覧
         </li>
-        {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-        ))}
+        {todos.length === 0 ? (
+          <li className="p-4 text-center opacity-60">現在予定のTodoはありません</li>
+        ) : (
+          todos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+          ))
+        )}
       </ul>
       <TodoForm addTodo={addTodo} />
     </>
