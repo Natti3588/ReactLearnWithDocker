@@ -6,6 +6,14 @@ type TodoItemProps = {
   deleteTodo: (id: string) => void;
 };
 
+const formatDate = (ms: number) => {
+  const d = new Date(ms);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+};
+
 const TodoItem: React.FC<TodoItemProps> = ({
   todo,
   toggleTodo,
@@ -14,7 +22,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
   return (
     <li className="list-row">
       <div className="grid grid-cols-3 items-center list-col-grow">
-        <div />
+        <div>{formatDate(todo.created_at)}</div>
         <button
           type="button"
           className={`justify-self-center text-lg font-semibold ${todo.completed ? "line-through text-gray-400" : ""}`}
