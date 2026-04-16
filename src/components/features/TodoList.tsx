@@ -13,7 +13,7 @@ const TodoList: React.FC = () => {
   };
 
   const addTodo = (text: string) => {
-    setTodos([...todos, { id: crypto.randomUUID(), text: text, completed: false }]);
+    setTodos([...todos, { id: crypto.randomUUID(), text: text, completed: false, created_at: Date.now() }]);
   };
 
   const deleteTodo = (id: string) => {
